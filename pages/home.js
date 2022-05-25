@@ -14,9 +14,10 @@ export default function WeatherHome({ weatherInfo }) {
     return (
         <div>
             <h2>Current weather Info</h2>
-            <p>{JSON.stringify(weatherInfo.main)}</p>
-            <p>{JSON.stringify(weatherInfo.name)}</p>
-            <p>{JSON.stringify(weatherInfo.wind)}</p>
+            <p>Main: {JSON.stringify(weatherInfo.name)}</p>
+            <p>Main: {JSON.stringify(weatherInfo.weather[0].main)}</p>
+            <p>Humidity: {JSON.stringify(weatherInfo.main.humidity)}%</p>
+            <p>Wind: {JSON.stringify(weatherInfo.wind.speed)}km/h</p>
         </div>
     )
 }
